@@ -1,39 +1,9 @@
 {"faq": [
                 {
-                        "answer": "No.",
+                        "answer": "'We' are Subhradip & Srinjana. This is a Cloud Native Cross-Platform Daily Covid 19 Dashboard and tracker for keeping updates on the Covid cases in India.",
                         "category": "General",
                         "qno": "1",
-                        "question": "Are you official?"
-                },
-                {
-                        "answer": "We are using state bulletins and official handles to update our numbers. The data is validated by a group$
-                        "category": "General",
-                        "qno": "2",
-                        "question": "What are your sources? How is the data gathered for this project?"
-                },
-                {
-                        "answer": "MoHFW updates the data at a scheduled time. However, we update them based on state press bulletins, offic$
-                        "category": "Data",
-                        "qno": "3",
-                        "question": "Why does covid19india.org have difference in numbers compared to MOHFW website?"
-                },
-                {
-                        "answer": "All the data is available through an API for further analysis and development here : <a href=\"https://ap$
-                        "category": "General",
-                        "qno": "4",
-                        "question": "Where can I find the data for this?"
-                },
-                {
-                        "answer": "We are a group of dedicated volunteers who curate and verify the data coming from several sources. We ext$
-                        "category": "General",
-                        "qno": "5",
-                        "question": "Who are you?"
-                },
-                {
-                        "answer": "Because it affects all of us. Today it's someone else who is getting infected; tomorrow it could be us. W$
-                        "category": "General",
-                        "qno": "6",
-                        "question": "Why are you guys putting in time and resources to do this while not gaining a single penny from it?"
+                        "question": "Who are we ?"
                 }
         ]
 }
