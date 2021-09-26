@@ -1,0 +1,16 @@
+{
+  "faq": [
+                {
+                        "answer": "'We' are Subhradip & Srinjana.",
+                        "category": "General",
+                        "qno": "1",
+                        "question": "Who are we ?"
+                },
+                {
+                        "answer": "This is a Cloud Native Cross-Platform Daily Covid 19 Dashboard and tracker for keeping updates on the Covid cases in India.",
+                        "category": "General",
+                        "qno": "2",
+                        "question": "What is this Project?"
+                }
+        ]
+}
