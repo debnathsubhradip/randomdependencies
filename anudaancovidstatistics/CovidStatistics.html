@@ -1,0 +1,52 @@
+<html>
+    <h1>N-Cov Cases</h1>
+    <h1>India</h1>
+    <h2>Report Date : <span id="reportdate"></span></h2>
+    <h2>Confirmed Cases : <span id="reportconfirm"></span></h2>
+    <h2>Deceased : <span id="reportdeceased"></span></h2>
+    <h2>Recovered : <span id="reportrecovered"></span></h2>
+    <br><br>
+    <h1>West Bengal</h1>
+    <h3>Report Date : <span id="wbreportdate"></span></h3>
+    <h2>Confirmed Cases : <span id="wbreportconfirm"></span></h2>
+    <h2>Deceased : <span id="wbreportdeceased"></span></h2>
+    <h2>Recovered : <span id="wbreportrecovered"></span></h2>
+
+<script>
+function datainfunc(data){
+    
+    console.log(data);
+    const jsondata=JSON.parse(JSON.stringify(data));
+    console.log(jsondata)
+    let todaymonth=new Date().toISOString().slice(0, 8);
+    let reportdate=new Date().toISOString().slice(8, 10);
+    console.log(todaymonth);
+    console.log(reportdate);
+    let lastKey = Object.keys(jsondata.TT.dates).sort().reverse()[0];
+    console.log(lastKey)
+    for (let date in jsondata.TT.dates){
+        if (date==lastKey){
+            console.log(jsondata.TT.dates[date].delta)
+            document.getElementById("reportdate").innerHTML=JSON.stringify(lastKey);        
+            document.getElementById("reportconfirm").innerHTML=JSON.stringify(jsondata.TT.dates[date].delta.confirmed);    
+            document.getElementById("reportdeceased").innerHTML=JSON.stringify(jsondata.TT.dates[date].delta.deceased);    
+            document.getElementById("reportrecovered").innerHTML=JSON.stringify(jsondata.TT.dates[date].delta.recovered);    
+
+            document.getElementById("wbreportdate").innerHTML=JSON.stringify(lastKey);        
+            document.getElementById("wbreportconfirm").innerHTML=JSON.stringify(jsondata.WB.dates[date].delta.confirmed);    
+            document.getElementById("wbreportdeceased").innerHTML=JSON.stringify(jsondata.WB.dates[date].delta.deceased);    
+            document.getElementById("wbreportrecovered").innerHTML=JSON.stringify(jsondata.WB.dates[date].delta.recovered);    
+        }
+        
+    }
+    for (let states in jsondata){
+        
+    }
+}
+fetch('https://data.incovid19.org/v4/min/timeseries.min.json')
+  .then(response => response.json())
+  .then(data => datainfunc(data));
+
+
+</script>
+</html>
